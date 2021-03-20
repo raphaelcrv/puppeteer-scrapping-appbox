@@ -1,6 +1,7 @@
 const puppeteer = require('puppeteer');
+const pdf = require('pdfkit');
 
-console.log('hellow');
+console.log('Proccess Initialized');
 
 (async () => {
   const browser = await puppeteer.launch();
@@ -15,10 +16,16 @@ console.log('hellow');
   await page.waitForTimeout(2000);
 
 
-  for (let index = 0; index < 1; index++) {
-    await page.click("[data-bp-vs-row-index='"+9+"'] .bp-thumbnail-nav")
-    await page.waitForTimeout(1000);
-    await page.screenshot({ path: './print/example'+index+'.png', clip : {x : 240, y: 90, width:980, height: 1250} });
+  for (let index = 0; index < 289; index++) {
+    try{
+      await page.click("[data-bp-vs-row-index='"+index+"'] .bp-thumbnail-nav")
+      await page.waitForTimeout(1000);
+      console.log("Generated File" + index);
+      await page.screenshot({ path: './print/'+index+'-page.png', clip : {x : 240, y: 90, width:980, height: 1250} });
+    }catch(e){
+      console.log(e);
+    }
+  
 
   }
 
