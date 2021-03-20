@@ -1,5 +1,6 @@
 const puppeteer = require('puppeteer');
 const pdf = require('pdfkit');
+const urlAppBoxFile = "https://app.box.com/s/lvv6t9l9pylwy36e67llb4oiqcqclzx5";
 
 console.log('Proccess Initialized');
 
@@ -11,7 +12,7 @@ console.log('Proccess Initialized');
       height: 1424,
       deviceScaleFactor :2
   });
-  await page.goto('https://app.box.com/s/lvv6t9l9pylwy36e67llb4oiqcqclzx5');
+  await page.goto(urlAppBoxFile);
   await page.waitForSelector('#page1',{timeout : 150000});
   await page.waitForTimeout(2000);
 
