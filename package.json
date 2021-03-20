@@ -1,0 +1,24 @@
+{
+  "name": "puppeteer-scrapping-appbox",
+  "version": "1.0.0",
+  "description": "### install git: https://git-scm.com/downloads ### install nodejs : https://nodejs.org/en/download/",
+  "main": "app.js",
+  "dependencies": {
+    "pdfkit": "^0.11.0",
+    "puppeteer": "^8.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaelcrv/puppeteer-scrapping-appbox.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphaelcrv/puppeteer-scrapping-appbox/issues"
+  },
+  "homepage": "https://github.com/raphaelcrv/puppeteer-scrapping-appbox#readme"
+}
